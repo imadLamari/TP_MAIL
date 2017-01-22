@@ -51,7 +51,6 @@ public class OncleTest {
 		Oncle oncle=new Oncle();
 		assertTrue(oncle.getPrenom().equals(""));
 	}
-
 	/**
 	 * Test method for {@link com.parent.model.Oncle#getParents()}.
 	 */
@@ -70,9 +69,7 @@ public class OncleTest {
 		Parent martin=new Parent("Sarra", 2);
 		Parent marie=new Parent("Julie",3);
 		ArrayList<Parent> nieces= new ArrayList<>();
-		nieces.add(marie);
-		nieces.add(martin);
-		
+		nieces.add(marie);nieces.add(martin);
 		Oncle oncle=new Oncle("LEROUGE","Eric",nieces);
 		assertEquals(nieces, oncle.getNeveux());
 	}
@@ -85,10 +82,8 @@ public class OncleTest {
 		Parent martin=new Parent("Sarra", 2);
 		Parent marie=new Parent("Julie",3);
 		ArrayList<Parent> nieces= new ArrayList<>();
-		nieces.add(marie);
-		nieces.add(martin);
-		Oncle oncle=new Oncle("LEROUGE","Eric",nieces);
-		
+		nieces.add(marie);nieces.add(martin);
+		Oncle oncle=new Oncle("LEROUGE","Eric",nieces);	
 		assertTrue(oncle.getNom()=="LEROUGE" && oncle.getPrenom()=="Eric");
 		assertArrayEquals(nieces.toArray(), oncle.getNeveux().toArray());
 	}
