@@ -57,6 +57,6 @@ public class Maitre
     
     public String animalDeCompagnie()
     {
-        return this.nom + " est le maître de " + this.animal.getNom();
+        return this.nom + " est le maitre de " + this.animal.getNom();
     }
 }
