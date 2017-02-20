@@ -23,7 +23,15 @@ public class Maitre
         
     }
 
-    /**
+    
+    public Maitre(Animal animal, String nom) {
+		super();
+		this.animal = animal;
+		this.nom = nom;
+	}
+
+
+	/**
      * An example of a method - replace this comment with your own
      * 
      * @param  y   a sample parameter for a method

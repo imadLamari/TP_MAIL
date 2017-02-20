@@ -23,8 +23,18 @@ public class Animal
         this.race="chat";
         
     }
+    
+    
 
-    /**
+    public Animal(String race, String nom) {
+		super();
+		this.race = race;
+		this.nom = nom;
+	}
+
+
+
+	/**
      * An example of a method - replace this comment with your own
      * 
      * @param  y   a sample parameter for a method
