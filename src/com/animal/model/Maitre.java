@@ -10,8 +10,8 @@ package com.animal.model;
 public class Maitre
 {
     // instance variables - replace the example below with your own
-    private Animal animal;
-    String nom;
+    protected Animal animal;
+    protected String nom;
 
     /**
      * Constructor for objects of class MaÃ®tre
@@ -66,5 +66,11 @@ public class Maitre
     public String animalDeCompagnie()
     {
         return this.nom + " est le maitre de " + this.animal.getNom();
+    }
+    
+    public void adopter(){
+      System.out.println( "je suis "+this.nom+", je possède un "+
+    		  				this.animal.getRace()+", son nom est "+
+    		  				this.animal.getNom());
     }
 }

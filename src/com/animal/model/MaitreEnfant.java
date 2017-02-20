@@ -13,6 +13,7 @@ public class MaitreEnfant extends Maitre {
 		return enfant;
 	}
 
+	
 	/**
 	 * @param enfant the enfant to set
 	 */
@@ -20,11 +21,15 @@ public class MaitreEnfant extends Maitre {
 		this.enfant = enfant;
 	}
  
-	public MaitreEnfant() {
-		// TODO Auto-generated constructor stub
+	public MaitreEnfant(Animal animal, String nom,String prenom) {
+		super(animal,nom);
+		this.setEnfant(new Enfant(nom, prenom, null));
 	}
 	
 	
-	
+	public void adopter(){
+		System.out.println( "je suis une enfant je m'appelle "+this.enfant.getNom()+" "+this.enfant.getPrenom()+
+				", je possède un "+ this.animal.getRace()+", son nom est "+ this.animal.getNom());
+	}
 	
 }

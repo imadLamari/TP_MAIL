@@ -1,8 +1,11 @@
 package com.animal.model;
 
+import com.parent.model.Enfant;
 import com.parent.model.Parent;
 
 public class MaitreParent extends Maitre {
+	
+	private Parent parent;
 	
 	public MaitreParent() {
 		// TODO Auto-generated constructor stub
@@ -23,9 +26,16 @@ public class MaitreParent extends Maitre {
 		this.parent = parent;
 	}
 
-	private Parent parent;
+	
+	public MaitreParent(Animal animal, String nom,String conjoint) {
+		super(animal,nom);
+		this.setParent(new Parent(conjoint,0)); 
+	}
 	
 	
-	
+	public void adopter(){
+		System.out.println( "je suis "+this.nom+" "+this.parent.description()+
+				", je possède un "+ this.animal.getRace()+", son nom est "+ this.animal.getNom());
+	}
 
 }
