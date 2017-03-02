@@ -1,6 +1,7 @@
 package com.animal.model;
 
-
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 /**
  * Write a description of class Animal here.
@@ -10,26 +11,30 @@ package com.animal.model;
  */
 public class Animal
 {
-    // instance variables - replace the example below with your own
+
+
+	// instance variables - replace the example below with your own
     private String race;
     private String nom;
+    private IComportement comportement; 
 
     /**
      * Constructor for objects of class Animal
      */
     public Animal()
     {
-        this.nom="tom";
-        this.race="chat";
-        
+        this.nom="";
+        this.race="";
+        this.comportement=null;
     }
     
     
 
-    public Animal(String race, String nom) {
+    public Animal(String race, String nom, IComportement comportement) {
 		super();
 		this.race = race;
 		this.nom = nom;
+		this.comportement=comportement;
 	}
 
 
@@ -58,9 +63,25 @@ public class Animal
     {
         this.race=race;
     }
+    
+    /**
+	 * @return the comporetement
+	 */
+	public IComportement getComportement() {
+		return comportement;
+	}
+
+	/**
+	 * @param comporetement the comporetement to set
+	 */
+	public void setComportement(IComportement comporetement) {
+		this.comportement = comporetement;
+	}
+    
+    
     public void informationAnimal()
     {
-        System.out.println (this.nom + " est un " + this.race);
-        
+    	Logger logger = Logger.getLogger("log");
+		logger.log(Level.SEVERE, this.nom + " est un " + this.race, new RuntimeException("Error"));
     }
 }

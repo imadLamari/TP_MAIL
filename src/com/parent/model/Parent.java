@@ -2,7 +2,7 @@ package com.parent.model;
 
 
 /**
- * Classe qui représente un parent 
+ * Classe qui represente un parent 
  * 
  * @author Imad LAMARI & Hichem BENDIA 
  * @version 1

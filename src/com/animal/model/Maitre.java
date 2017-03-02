@@ -14,12 +14,13 @@ public class Maitre
     protected String nom;
 
     /**
-     * Constructor for objects of class MaÃ®tre
+     * Constructor for objects of class Maitre
      */
     public Maitre()
     {
         // initialise instance variables
-        this.nom="TOTO";
+        this.nom="";
+        this.animal=null;
         
     }
 
@@ -65,12 +66,10 @@ public class Maitre
     
     public String animalDeCompagnie()
     {
-        return this.nom + " est le maitre de " + this.animal.getNom();
+        return this.nom + " possede un(e)"+this.animal.getRace()+", qui se nomme" + this.animal.getNom();
     }
     
-    public void adopter(){
-      System.out.println( "je suis "+this.nom+", je possède un "+
-    		  				this.animal.getRace()+", son nom est "+
-    		  				this.animal.getNom());
+    public void adopter(Animal animal){
+    	this.animal=animal;
     }
 }

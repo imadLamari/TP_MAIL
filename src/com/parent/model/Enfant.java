@@ -22,7 +22,9 @@ public class Enfant
     public Enfant()
     {
         // initialise instance variables
-      
+      this.nom="";
+      this.prenom="";
+      parent=null;
     }
     /**
      * Constructor for objects of class Enfant
